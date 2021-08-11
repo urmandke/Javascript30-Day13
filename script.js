@@ -12,3 +12,14 @@
       if (callNow) func.apply(context, args);
     };
   }
+
+  const sliderImages = document.querySelectorAll('.slide-in');
+
+  function checkSlide(e){
+    sliderImages.forEach(sliderImage => {
+        const slideInAt = (window.scrollY + window.innerHeight);
+        console.log(slideInAt);
+    });
+  }
+
+  window.addEventListener('scroll',debounce(checkSlide));
